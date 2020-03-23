@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<title>Villa Pavloff</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="photos/favicon-house.png" />
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+    body,
+    h1,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE and Edge */
+    
+    body {
+        -ms-overflow-style: none;
+    }
+    
+    .shadowText {
+        text-shadow: 1px 1px 4px black;
+    }
+    
+    @keyframes bg-animation {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .bgimg {
+        background-image: url('photos/generalBW.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed, fixed;
+        animation: bg-animation 2s 1 0s ease-in;
+        /*-webkit-transition: background-image 2.2s ease-in-out;
+        transition: background-image 2.2s ease-in-out;*/
+    }
+    
+    .placeCenter {
+        margin: 0 auto;
+        width: 70%;
+        /*background-color: lightgrey;*/
+        padding-left: 8%;
+    }
+    
+    @media (max-width: 640px) {
+        .placeCenter {
+            margin-right: 0;
+        }
+    }
+    
+    #whithoutBG {
+        opacity: initial 1;
+    }
+    
+    hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    }
+    
+    .progress-container {
+        right: 0;
+        z-index: 100;
+        position: fixed;
+        width: 8px;
+        height: 100%;
+        /*100%;*/
+        background: none;
+        /*#ccc;*/
+    }
+    
+    .progress-bar {
+        height: 0%;
+        background: #424242;
+        width: 8px;
+    }
+    
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+    
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+</style>
+
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <div class="bgimg w3-display-container w3-text-white">
+        <div class="w3-display-middle w3-jumbo whithoutBG">
+            <p class="shadowText">Villa Cevennes</p>
+        </div>
+        <div class="w3-display-topleft w3-container w3-xlarge mainButton">
+            <p><button onclick="document.getElementById('infos').style.display='block'" class="w3-button w3-black" style="position:fixed">infos</button></p>
+            <p><button onclick="sendMail();" class="w3-button w3-black" style="position:fixed;top:100px;">contact</button></p>
+            <!--<p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black" style="position:fixed;top:100px;">contact</button></p>-->
+        </div>
+        <div class="w3-display-bottomright w3-container" style="text-align: right;">
+            <p class="w3-xlarge shadowText">Combesommière, 30270 Saint-Jean-du-Gard</p>
+            <p class="w3-large shadowText">
+                Reservation : <a href="mailto:annick.pavloff@gmail.com?subject=Location%20villa%20Pavloff">annick.pavloff@gmail.com</a>
+            </p>
+            <!--<p>powered by Pavloff</p>-->
+        </div>
+    </div>
+
+
+
+    <!-- Photo Section -->
+    <div class="w3-container placeCenter">
+        <h2><strong>Photos</strong></h2>
+
+        <div class="w3-hide-large" style="margin-top:80px"></div>
+        <h4><strong>Outside</strong></h4>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/vue-generale1-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(1);document.getElementById('slideshow-displayer').style.display=''" title="General view">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/terrasse3-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(2);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/vue-general2-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(3);document.getElementById('slideshow-displayer').style.display=''" title="View over the house">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/terrasse-soleil-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(4);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/jardin-sophie-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(5);document.getElementById('slideshow-displayer').style.display=''" title="Garden">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/jardin-banc-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(6);document.getElementById('slideshow-displayer').style.display=''" title="Garden 2">
+            </div>
+        </div>
+
+        <h4><strong>Inside</strong></h4>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s4 m4 l4">
+                <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
+                <img class="demo w3-hover-opacity" src="photos/cuisine-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(7);document.getElementById('slideshow-displayer').style.display=''" title="Kitchen">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/chambre-bleue-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(8);document.getElementById('slideshow-displayer').style.display=''" title="Blue Bedroom">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/chambre-beige-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(9);document.getElementById('slideshow-displayer').style.display=''" title="Beige Bedroom">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s4 m4 l4">
+                <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
+                <img class="demo w3-hover-opacity" src="photos/salon-breakfast-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(10);document.getElementById('slideshow-displayer').style.display=''" title="Living room">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/salle-de-bain-bleue-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(11);document.getElementById('slideshow-displayer').style.display=''" title="Blue Bathroom">
+            </div>
+            <div class="w3-col s4 m4 l4">
+                <img class="demo w3-hover-opacity" src="photos/salle-de-bain-rose-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(12);document.getElementById('slideshow-displayer').style.display=''" title="Pink Bathroom">
+            </div>
+        </div>
+    </div>
+    <div id="slideshow-displayer" style="display: none;">
+        <div id="darkBG" onclick="document.getElementById('slideshow-displayer').style.display='none'"></div>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/vue-generale1.jpg" style="width:100%">
+                <div class="text">General view</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/terrasse3.jpg" style="width:100%">
+                <div class="text">Cuisine de jour 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/vue-general2.jpg" style="width:100%">
+                <div class="text">View over the house</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/terrasse-soleil.jpg" style="width:100%">
+                <div class="text">Patio</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/jardin-sophie.jpg" style="width:100%">
+                <div class="text">Garden</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/jardin-banc.jpg" style="width:100%">
+                <div class="text">Garden 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/cuisine.jpg" style="width:100%">
+                <div class="text">Kitchen</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/chambre-bleue.jpg" style="width:100%">
+                <div class="text">Blue bedroom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/chambre-beige.jpg" style="width:100%">
+                <div class="text">Beige bedroom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/salon-breakfast.jpg" style="width:100%">
+                <div class="text">Living room</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">11 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/salle-de-bain-bleue.jpg" style="width:100%">
+                <div class="text">Blue Bathroom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 12</div>
+                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <img src="photos/salle-de-bain-rose.jpg" style="width:100%">
+                <div class="text">Pink Bathroom</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+        </div>
+    </div>
+
+    <div class="w3-container placeCenter">
+        <h2><strong>Informations</strong></h2>
+
+        <!--style="text-align: center;"-->
+        <h4><strong>The space :</strong></h4>
+        <div class="w3-row w3-large" style="text-align: center;">
+            <div class="w3-col s6">
+                <p><i class="fa fa-fw fa-male"></i> Max people: 14</p>
+                <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 3</p>
+                <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 6</p>
+            </div>
+            <div class="w3-col s6">
+                <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 5PM</p>
+                <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 10PM</p>
+            </div>
+        </div>
+        <hr>
+
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large" style="text-align: center;">
+            <div class="w3-col s6">
+                <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                <p><i class="fa fa-fw fa-tv"></i> TV</p>
+            </div>
+            <div class="w3-col s6">
+                <p><i class="fas fa-fw fa-utensils"></i> Kitchen</p>
+                <p><i class="fas fa-fw fa-temperature-high"></i> Heating</p>
+                <p><i class="fa fa-fw fa-swimming-pool"></i> Swimming Pool</p>
+            </div>
+        </div>
+        <hr>
+
+        <h4><strong>Extra Info</strong></h4>
+        <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fab fa-cc-mastercard w3-large"></i> <i class="fab fa-cc-amex w3-large"></i> <i class="fab fa-cc-visa w3-large"></i> <i class="fab fa-cc-paypal w3-large"></i></p>
+        <hr>
+
+        <h4><strong>Rules</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+
+        <h2><strong>Loacalisation</strong></h2>
+        <p>The villa GPS corrdinates are 44.115157, 3.868001</p>
+    </div>
+
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.4777303711214!2d3.8674367951898576!3d44.115138338926336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDA2JzU0LjUiTiAzwrA1MicwNC43IkU!5e0!3m2!1sfr!2sfr!4v1584902763671!5m2!1sfr!2sfr"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <!-- Infos Modal Button -->
+    <div id="infos" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-black w3-display-container">
+                <span onclick="document.getElementById('infos').style.display='none'" class="w3-button w3-display-topright w3-large"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <h1>The space</h1>
+            </div>
+            <div class="w3-container">
+
+                <div class="w3-row w3-large">
+                    <div class="w3-col s6">
+                        <p><i class="fa fa-fw fa-male"></i> Max people: 14</p>
+                        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 3</p>
+                        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 6</p>
+                    </div>
+                    <div class="w3-col s6">
+                        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+                        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-container w3-black">
+                <h1>Amenities</h1>
+            </div>
+            <div class="w3-container">
+                <div class="w3-row w3-large">
+                    <div class="w3-col s6">
+                        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                        <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                    </div>
+                    <div class="w3-col s6">
+                        <p><i class="fas fa-fw fa-utensils"></i> Kitchen</p>
+                        <p><i class="fas fa-fw fa-temperature-high"></i> Heating</p>
+                        <p><i class="fa fa-fw fa-swimming-pool"></i> Swimming Pool</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container w3-black">
+                <h1>Extra Info</h1>
+            </div>
+            <div class="w3-container">
+                <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fab fa-cc-mastercard w3-large"></i> <i class="fab fa-cc-amex w3-large"></i> <i class="fab fa-cc-visa w3-large"></i> <i class="fab fa-cc-paypal w3-large"></i></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script to open and close sidebar when on tablets and phones
+        function w3_open() {
+            document.getElementById("mySidebar ").style.display = "block ";
+            document.getElementById("myOverlay ").style.display = "block ";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar ").style.display = "none ";
+            document.getElementById("myOverlay ").style.display = "none ";
+        }
+
+        //
+        //----------------------------------------------------------
+        //
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides ");
+            var dots = document.getElementsByClassName("dot ");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none ";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active ", " ");
+            }
+            slides[slideIndex - 1].style.display = "block ";
+            dots[slideIndex - 1].className += " active ";
+        }
+
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {
+            scrolling()
+        };
+
+        function scrolling() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.height = scrolled + "% ";
+        }
+
+        function sendMail() {
+            window.location = "mailto:annick.pavloff@gmail.com?subject=Location%20villa%20Pavloff ";
+        }
+
+        //----------------------------------------------------------------------------------
+        //                          Loacalisation
+        //----------------------------------------------------------------------------------
+    </script>
+</body>
+
+</html>
