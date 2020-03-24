@@ -40,230 +40,234 @@
 
 
     <!-- Photo Section -->
+    <div class="sticky-container">
 
-
-    <div class="w3-container placeCenter">
         <h2 class="sticky"><strong>Photos</strong></h2>
-        <div class="w3-hide-large" style="margin-top:80px"></div>
-        <h4><strong>Outside</strong></h4>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/vue-generale1-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(1);document.getElementById('slideshow-displayer').style.display=''" title="General view">
+        <div class="w3-container placeCenter">
+            <div class="w3-hide-large" style="margin-top:80px"></div>
+            <h4><strong>Outside</strong></h4>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/vue-generale1-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(1);document.getElementById('slideshow-displayer').style.display=''" title="General view">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/terrasse3-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(2);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/gravier-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(3);document.getElementById('slideshow-displayer').style.display=''" title="Barbecue Place">
+                </div>
             </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/terrasse3-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(2);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/terrasse-soleil-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(4);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/jardin-sophie-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(5);document.getElementById('slideshow-displayer').style.display=''" title="Garden">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/jardin-banc-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(6);document.getElementById('slideshow-displayer').style.display=''" title="Garden">
+                </div>
             </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/gravier-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(3);document.getElementById('slideshow-displayer').style.display=''" title="Barbecue Place">
+
+            <h4><strong>Inside</strong></h4>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4 m4 l4">
+                    <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
+                    <img class="demo w3-hover-opacity" src="photos/cuisine-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(7);document.getElementById('slideshow-displayer').style.display=''" title="Kitchen">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/chambre-bleue-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(8);document.getElementById('slideshow-displayer').style.display=''" title="Blue Bedroom">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/chambre-beige-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(9);document.getElementById('slideshow-displayer').style.display=''" title="Beige Bedroom">
+                </div>
+            </div>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4 m4 l4">
+                    <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
+                    <img class="demo w3-hover-opacity" src="photos/salon-breakfast-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(10);document.getElementById('slideshow-displayer').style.display=''" title="Living room">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/salon-apero-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(11);document.getElementById('slideshow-displayer').style.display=''" title="Living Room">
+                </div>
+                <div class="w3-col s4 m4 l4">
+                    <img class="demo w3-hover-opacity" src="photos/cuisine-nuit-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(12);document.getElementById('slideshow-displayer').style.display=''" title="Kitchen at night">
+                </div>
             </div>
         </div>
+        <div id="slideshow-displayer" style="display: none;">
+            <div id="darkBG" onclick="document.getElementById('slideshow-displayer').style.display='none'"></div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/terrasse-soleil-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(4);document.getElementById('slideshow-displayer').style.display=''" title="Patio">
-            </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/jardin-sophie-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(5);document.getElementById('slideshow-displayer').style.display=''" title="Garden">
-            </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/jardin-banc-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(6);document.getElementById('slideshow-displayer').style.display=''" title="Garden">
-            </div>
-        </div>
+            <div class="slideshow-container">
 
-        <h4><strong>Inside</strong></h4>
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/vue-generale1.jpg" style="width:100%">
+                    <div class="text">General view</div>
+                </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col s4 m4 l4">
-                <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
-                <img class="demo w3-hover-opacity" src="photos/cuisine-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(7);document.getElementById('slideshow-displayer').style.display=''" title="Kitchen">
-            </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/chambre-bleue-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(8);document.getElementById('slideshow-displayer').style.display=''" title="Blue Bedroom">
-            </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/chambre-beige-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(9);document.getElementById('slideshow-displayer').style.display=''" title="Beige Bedroom">
-            </div>
-        </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/terrasse3.jpg" style="width:100%">
+                    <div class="text">Outside table</div>
+                </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col s4 m4 l4">
-                <!-- w3-opacity w3-hover-opacity-off // mettre ca au nom de la classe pour inverser l'effet-->
-                <img class="demo w3-hover-opacity" src="photos/salon-breakfast-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(10);document.getElementById('slideshow-displayer').style.display=''" title="Living room">
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/gravier.jpg" style="width:100%">
+                    <div class="text">Barbecue Place</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/terrasse-soleil.jpg" style="width:100%">
+                    <div class="text">Patio</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/jardin-sophie.jpg" style="width:100%">
+                    <div class="text">Garden</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/jardin-banc.jpg" style="width:100%">
+                    <div class="text">Garden 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/cuisine.jpg" style="width:100%">
+                    <div class="text">Kitchen</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/chambre-bleue.jpg" style="width:100%">
+                    <div class="text">Blue bedroom</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/chambre-beige.jpg" style="width:100%">
+                    <div class="text">Beige bedroom</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/salon-breakfast.jpg" style="width:100%">
+                    <div class="text">Living room</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">11 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/salon-apero.jpg" style="width:100%">
+                    <div class="text">Living Room</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">12 / 12</div>
+                    <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <img src="photos/cuisine-nuit.jpg" style="width:100%">
+                    <div class="text">Kitchen at night</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
             </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/salon-apero-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(11);document.getElementById('slideshow-displayer').style.display=''" title="Living Room">
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
             </div>
-            <div class="w3-col s4 m4 l4">
-                <img class="demo w3-hover-opacity" src="photos/cuisine-nuit-min.jpg" style="width:100%;cursor:pointer" onclick="currentSlide(12);document.getElementById('slideshow-displayer').style.display=''" title="Kitchen at night">
-            </div>
-        </div>
-    </div>
-    <div id="slideshow-displayer" style="display: none;">
-        <div id="darkBG" onclick="document.getElementById('slideshow-displayer').style.display='none'"></div>
-
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/vue-generale1.jpg" style="width:100%">
-                <div class="text">General view</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/terrasse3.jpg" style="width:100%">
-                <div class="text">Outside table</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/gravier.jpg" style="width:100%">
-                <div class="text">Barbecue Place</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/terrasse-soleil.jpg" style="width:100%">
-                <div class="text">Patio</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/jardin-sophie.jpg" style="width:100%">
-                <div class="text">Garden</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">6 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/jardin-banc.jpg" style="width:100%">
-                <div class="text">Garden 2</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">7 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/cuisine.jpg" style="width:100%">
-                <div class="text">Kitchen</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">8 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/chambre-bleue.jpg" style="width:100%">
-                <div class="text">Blue bedroom</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">9 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/chambre-beige.jpg" style="width:100%">
-                <div class="text">Beige bedroom</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">10 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/salon-breakfast.jpg" style="width:100%">
-                <div class="text">Living room</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">11 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/salon-apero.jpg" style="width:100%">
-                <div class="text">Living Room</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">12 / 12</div>
-                <span onclick="document.getElementById('slideshow-displayer').style.display='none'" style="cursor: pointer;" class="w3-button w3-display-topright w3-large quitSlides"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <img src="photos/cuisine-nuit.jpg" style="width:100%">
-                <div class="text">Kitchen at night</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
         </div>
     </div>
 
     <!-- Information Section-->
-    <div class="w3-container placeCenter">
+    <div class="sticky-container">
         <h2 class="sticky"><strong>Informations</strong></h2>
+        <div class="w3-container placeCenter">
 
+            <!--style="text-align: center;"-->
+            <h4><strong>The space :</strong></h4>
+            <div class="w3-row w3-large" style="text-align: center;">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 14</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 3</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 6</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 5PM</p>
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 10AM</p>
+                </div>
+            </div>
+            <hr>
 
-        <!--style="text-align: center;"-->
-        <h4><strong>The space :</strong></h4>
-        <div class="w3-row w3-large" style="text-align: center;">
-            <div class="w3-col s6">
-                <p><i class="fa fa-fw fa-male"></i> Max people: 14</p>
-                <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 3</p>
-                <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 6</p>
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large" style="text-align: center;">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fas fa-fw fa-utensils"></i> Kitchen</p>
+                    <p><i class="fas fa-fw fa-temperature-high"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-swimming-pool"></i> Swimming Pool</p>
+                </div>
             </div>
-            <div class="w3-col s6">
-                <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 5PM</p>
-                <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 10AM</p>
-            </div>
+            <hr>
+
+            <h4><strong>Extra Info</strong></h4>
+            <p>
+                The kitchen contains among other things an oven and a microwave. There is also a washing machine, a tennis table and a diving board. The nearest town is called Saint-Jean-du-Gard (2.5km), the market is held every tuesday morning. There is several spot
+                in the region to swim in the river and hike. For any further information about the surronding area don't hesitate to contact the local tourist information center and visit their <a href="#" onclick="open2link();">website</a>.
+            </p>
+            <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fab fa-cc-mastercard w3-large"></i> <i class="fab fa-cc-amex w3-large"></i> <i class="fab fa-cc-visa w3-large"></i> <i class="fab fa-cc-paypal w3-large"></i></p>
+            <hr>
+
+            <h4><strong>Rules</strong></h4>
+            <p>Pets are not allowed on the property.</p>
         </div>
-        <hr>
-
-        <h4><strong>Amenities</strong></h4>
-        <div class="w3-row w3-large" style="text-align: center;">
-            <div class="w3-col s6">
-                <p><i class="fa fa-fw fa-shower"></i> Shower</p>
-                <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
-                <p><i class="fa fa-fw fa-tv"></i> TV</p>
-            </div>
-            <div class="w3-col s6">
-                <p><i class="fas fa-fw fa-utensils"></i> Kitchen</p>
-                <p><i class="fas fa-fw fa-temperature-high"></i> Heating</p>
-                <p><i class="fa fa-fw fa-swimming-pool"></i> Swimming Pool</p>
-            </div>
-        </div>
-        <hr>
-
-        <h4><strong>Extra Info</strong></h4>
-        <p>
-            The kitchen contains among other things an oven and a microwave. There is also a washing machine, a tennis table and a diving board. The nearest town is called Saint-Jean-du-Gard (2.5km), the market is held every tuesday morning. There is several spot
-            in the region to swim in the river and hike. For any further information about the surronding area don't hesitate to contact the local tourist information center and visit their <a href="#" onclick="open2link();">website</a>.
-        </p>
-        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fab fa-cc-mastercard w3-large"></i> <i class="fab fa-cc-amex w3-large"></i> <i class="fab fa-cc-visa w3-large"></i> <i class="fab fa-cc-paypal w3-large"></i></p>
-        <hr>
-
-        <h4><strong>Rules</strong></h4>
-        <p>Pets are not allowed on the property.</p>
-
     </div>
     <!-- lOCATION Section-->
-    <div class="w3-container placeCenter">
+    <div class="sticky-container">
         <h2 class="sticky"><strong>Location</strong></h2>
 
-        <p>The villa GPS corrdinates are 44.115157, 3.868001</p>
-    </div>
+        <div class="w3-container placeCenter">
 
+            <p>The villa GPS corrdinates are 44.115157, 3.868001</p>
+        </div>
+    </div>
 
     <div class="map-responsive">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.4777303711214!2d3.8674367951898576!3d44.115138338926336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDA2JzU0LjUiTiAzwrA1MicwNC43IkU!5e0!3m2!1sfr!2sfr!4v1584902763671!5m2!1sfr!2sfr"
