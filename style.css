@@ -24,8 +24,8 @@ h2 {
     background-color: rgb(66, 66, 66);
 }
 
-body,
-html {
+html,
+body {
     height: 100%
 }
 
@@ -135,6 +135,15 @@ hr {
 
 img {
     vertical-align: middle;
+}
+
+
+/*Stichy elements*/
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
 }
 
 
