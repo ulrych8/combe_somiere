@@ -141,6 +141,7 @@ img {
 /*Stichy elements*/
 
 .sticky {
+    z-index: 5;
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
