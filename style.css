@@ -130,7 +130,7 @@ hr {
 }
 
 .mySlides {
-    display: none
+    display: none;
 }
 
 img {
@@ -151,7 +151,7 @@ img {
 /*Button contact and infos*/
 
 .mainButton {
-    z-index: 1000;
+    z-index: 6;
 }
 
 
@@ -300,6 +300,7 @@ img {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    z-index: 7;
     /*overflow: hidden;*/
 }
 
